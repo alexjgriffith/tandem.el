@@ -1,0 +1,29 @@
+#+TITLE: Tandem.el
+#+AUTHOR: Alexnader Griffith
+
+An emacs extension for [[https://github.com/typeintandem/tandem][Tandem]].
+
+* Setup
+
+1. Clone Tandem
+2. Build CRDT with a recent version of Node (v8 or v9)
+3. Make sure you have a recent version of python3 (v3.6)
+4. Clone `Tandem.el`
+5. Execute the code below in your `*scratch*` buffer or add it to your initialization file
+
+
+#+BEGIN_SRC: emacs-lisp
+(add-to-list 'load-path  "<path-to-tandem.el>/lisp/")
+(require 'tandem)
+(setq tandem-agent-file "<path-to-tandem>/agent/")
+#+END_SRC
+
+* Extension Progress
+** Completed for 0.1.0
+- [X] Capture any changes to the buffer
+- [X] API JSON layer for emacs to talk with agent
+
+** Required for 0.2.0
+- [ ] Handle newline and tabs correctly 
+- [ ] Start Tandem Process from within emacs
+- [ ] Have async sentinal lock and update emacs buffer
